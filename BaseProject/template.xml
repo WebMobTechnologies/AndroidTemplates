@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="Base Project"
+    minApi="11"
+    minBuildApi="22"
+    description="Creates a new base project">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityClass)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+
+    <parameter
+        id="imageLibrary"
+        name="Image Library"
+        type="enum"
+        default="1"
+        help="Which library you want" >
+        <option id="1">Glide</option>
+        <option id="2">Picasso</option>
+    </parameter>
+
+
+    <parameter
+            id="isSplash"
+            name="Splash Activity"
+            type="boolean"
+            default="true"
+            help="If true, it will create default splash actvity."/>
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
