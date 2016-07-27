@@ -25,7 +25,9 @@ public class VolleyUtils {
     public static void initVolley(Context context) {
         mContext = context;
     }
-
+ public static VolleyUtils getInstance() {
+        return new VolleyUtils();
+    }
 
     /**
      * Gets volley request queue.
@@ -36,8 +38,7 @@ public class VolleyUtils {
 
         try {
             if (requestQueue == null) {
-                requestQueue = VolleyRequestQueue.getInstance(mContext).getRequestQueue();
-                //requestQueue = Volley.newRequestQueue(mContext);
+                requestQueue = Volley.newRequestQueue(mContext);
             }
             return requestQueue;
         } catch (Exception npe) {

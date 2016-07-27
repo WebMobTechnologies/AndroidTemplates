@@ -84,6 +84,8 @@
   <instantiate from="root/src/app_package/activity/BaseActivity.java.ftl"
   to="${escapeXmlAttribute(srcOut)}/activity/BaseActivity.java" />
 
+
+
   <instantiate from="root/src/app_package/activity/SimpleActivity.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/activity/${activityClass}.java" />
 
@@ -95,6 +97,10 @@
 
   <instantiate from="root/src/app_package/utils/http/VolleyUtils.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/utils/http/VolleyUtils.java" />
+
+<instantiate from="root/src/app_package/utils/http/HttpVolleyRequest.java.ftl"
+                 to="${escapeXmlAttribute(srcOut)}/utils/http/HttpVolleyRequest.java" />
+
   <instantiate from="root/src/app_package/utils/http/imageutil/BitmapCache.java.ftl"
                 to="${escapeXmlAttribute(srcOut)}/utils/http/imageutil/BitmapCache.java" />
 

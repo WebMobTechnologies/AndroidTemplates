@@ -1,9 +1,14 @@
 package ${packageName}.utils;
 
 import android.util.Log;
-
+/**
+ * Developed at WebMobTechnologies
+ *
+ * @author @milaptank and @jaymin_wmt
+ *         Debug Logs 
+ */
 public class Debug {
-    public static final boolean debug = true;
+    public static final boolean debug = BuildConfig.DEBUG;
     public static final String TAG = Debug.class.getSimpleName();
 
     public static void i(String tag, String message) {
