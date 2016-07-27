@@ -16,10 +16,9 @@
 
   <copy from="root/src/app_package/listener"
       to="${escapeXmlAttribute(srcOut)}/listener" />
-
+      
   <copy from="root/res/anim"
               to="${escapeXmlAttribute(resOut)}/anim" />
-
   <copy from="root/res/drawable-hdpi"
     	 to="${escapeXmlAttribute(resOut)}/drawable-hdpi" />
 
