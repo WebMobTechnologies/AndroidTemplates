@@ -3,7 +3,7 @@
     <!-- internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application  android:name=."${appName}">
+    <application  android:name".${appName}">
 		
     	<#if isSplash>
 		    <activity android:name=".activity.SplashActivity"
